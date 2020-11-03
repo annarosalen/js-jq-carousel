@@ -26,7 +26,7 @@ $("document").ready(function(){
 
   $('.next').click(carouselNext);
 
-  
+
 
   // per tornare indietro
 
@@ -51,26 +51,28 @@ $("document").ready(function(){
 
   document.body.addEventListener('keydown', function(event) {
 
-    var imgActive = $('img.active');
-    imgActive.removeClass('active');
+    // var imgActive = $('img.active');
+    // imgActive.removeClass('active');
 
     var key = event.key;
     switch (key) {
       // se freccia sinistra
       case "ArrowLeft":
-        if(imgActive.hasClass('first')){
-          $("img.last").addClass('active');
-        }else{
-          imgActive.prev('img').addClass('active');
-        }
+        carouselPrev();
+        // if(imgActive.hasClass('first')){
+        //   $("img.last").addClass('active');
+        // }else{
+        //   imgActive.prev('img').addClass('active');
+        // }
       break;
       // se freccia destra
       case "ArrowRight":
-        if(imgActive.hasClass('last')){
-          $("img.first").addClass('active');
-        }else{
-          imgActive.next('img').addClass('active');
-        }
+        carouselNext();
+        // if(imgActive.hasClass('last')){
+        //   $("img.first").addClass('active');
+        // }else{
+        //   imgActive.next('img').addClass('active');
+        // }
       break;
     }
 
