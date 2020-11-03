@@ -28,8 +28,8 @@ $("document").ready(function(){
 
   // per tornare indietro
 
-  function carouselPrev(){
 
+  function carouselPrev(){
     var imgActive = $('img.active');
 
     imgActive.removeClass('active');
@@ -44,6 +44,32 @@ $("document").ready(function(){
 
   $('.prev').click(carouselPrev);
 
+
+
+  document.body.addEventListener('keydown', function(event) {
+
+    var imgActive = $('img.active');
+    imgActive.removeClass('active');
+
+    var key = event.key;
+    switch (key) {
+      case "ArrowLeft":
+        if(imgActive.hasClass('first')){
+          $("img.last").addClass('active');
+        }else{
+          imgActive.prev('img').addClass('active');
+        }
+      break;
+      case "ArrowRight":
+        if(imgActive.hasClass('last')){
+          $("img.first").addClass('active');
+        }else{
+          imgActive.next('img').addClass('active');
+        }
+      break;
+    }
+
+  });
 
 
 });
