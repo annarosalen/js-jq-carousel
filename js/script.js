@@ -26,8 +26,9 @@ $("document").ready(function(){
 
   $('.next').click(carouselNext);
 
-  // per tornare indietro
+  
 
+  // per tornare indietro
 
   function carouselPrev(){
     var imgActive = $('img.active');
@@ -76,4 +77,4 @@ $("document").ready(function(){
   });
 
 
-});
+}); //fine document ready
