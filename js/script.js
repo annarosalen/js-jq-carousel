@@ -46,6 +46,8 @@ $("document").ready(function(){
 
 
 
+// inserisco arrows
+
   document.body.addEventListener('keydown', function(event) {
 
     var imgActive = $('img.active');
@@ -53,6 +55,7 @@ $("document").ready(function(){
 
     var key = event.key;
     switch (key) {
+      // se freccia sinistra
       case "ArrowLeft":
         if(imgActive.hasClass('first')){
           $("img.last").addClass('active');
@@ -60,6 +63,7 @@ $("document").ready(function(){
           imgActive.prev('img').addClass('active');
         }
       break;
+      // se freccia destra
       case "ArrowRight":
         if(imgActive.hasClass('last')){
           $("img.first").addClass('active');
