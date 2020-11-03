@@ -51,28 +51,15 @@ $("document").ready(function(){
 
   document.body.addEventListener('keydown', function(event) {
 
-    // var imgActive = $('img.active');
-    // imgActive.removeClass('active');
-
     var key = event.key;
     switch (key) {
       // se freccia sinistra
       case "ArrowLeft":
         carouselPrev();
-        // if(imgActive.hasClass('first')){
-        //   $("img.last").addClass('active');
-        // }else{
-        //   imgActive.prev('img').addClass('active');
-        // }
       break;
       // se freccia destra
       case "ArrowRight":
         carouselNext();
-        // if(imgActive.hasClass('last')){
-        //   $("img.first").addClass('active');
-        // }else{
-        //   imgActive.next('img').addClass('active');
-        // }
       break;
     }
 
