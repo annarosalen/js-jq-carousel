@@ -49,21 +49,34 @@ $("document").ready(function(){
 
 // inserisco arrows
 
-  document.body.addEventListener('keydown', function(event) {
+  // metodo tramite jquery
+  $(document).keydown(function(event){
 
-    var key = event.key;
-    switch (key) {
-      // se freccia sinistra
-      case "ArrowLeft":
-        carouselPrev();
-      break;
-      // se freccia destra
-      case "ArrowRight":
-        carouselNext();
-      break;
+    if(event.which === 39){
+      carouselNext();
     }
-
+    if(event.which === 37){
+      carouselPrev();
+    }
   });
+
+
+  // metodo tramite js vanilla
+  // document.body.addEventListener('keydown', function(event) {
+  //
+  //   var key = event.key;
+  //   switch (key) {
+  //     // se freccia sinistra
+  //     case "ArrowLeft":
+  //       carouselPrev();
+  //     break;
+  //     // se freccia destra
+  //     case "ArrowRight":
+  //       carouselNext();
+  //     break;
+  //   }
+  //
+  // });
 
 
 }); //fine document ready
